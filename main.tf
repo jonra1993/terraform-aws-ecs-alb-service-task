@@ -187,7 +187,7 @@ resource "aws_iam_role" "ecs_service" {
 }
 
 data "aws_iam_policy_document" "ecs_service_policy" {
-  count = local.enable_ecs_service_role && var.service_role_arn == null ? 1 : 0
+  count = local.enable_ecs_service_role && var.service_role_arn == null ? 1 : 1
 
   statement {
     effect    = "Allow"
